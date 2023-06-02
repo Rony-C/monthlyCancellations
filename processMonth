@@ -33,6 +33,12 @@ def processMonth(file, month):
         #Get counts of cancellations per user and sorts
         count = [(key, len(value)) for key, value in outputs.items()]
         count.sort(key= lambda x: x[1], reverse=True)
+    
+    #Append results to CSV
+    #with open('export.csv', 'a') as a:
+        #write = csv.writer(a)
+
+   #write.writerows(count)
 
     print(f'Number of unique users: {len(outputs.keys())}')
     print(count)
